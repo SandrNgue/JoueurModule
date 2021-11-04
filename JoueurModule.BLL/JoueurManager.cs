@@ -32,16 +32,6 @@ namespace JoueurModule.BLL
         public Joueur Authenticate(string Email, string Nom)
         {
             return joueurRepository.Find(x => x.Nom == Nom && x.Email == Email);
-/*
-            var joueurs = joueurRepository.FindByName(Nom);
-            foreach (var joueur in joueurs)
-            {
-                if (joueur.Nom == Email && joueur.Nom == Nom)
-                    return joueur;
-            }
-            
-            return null;
-*/
         }
     }
 }

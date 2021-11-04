@@ -13,11 +13,14 @@ namespace JoueurModule.DAL
 
         public List<Joueur> FindByName(string value)
         {
+            return FindAll(x => x.Nom == value);
+            /*
             List<Joueur> list = new List<Joueur>();
             foreach (var data in datas)
                 if (data.Nom.ToLower().Contains(value.ToLower()))
                     list.Add(data);
             return list;
+            */
         }
     }
 }
